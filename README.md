@@ -1,6 +1,6 @@
 # CMD-Py
 
-Implementation of a cmd like CLI app in Python 3.\n
+Implementation of a cmd like CLI app in Python 3
 Features:
 - copy/move/delete files and directories
 - list/create/modify/delete registry keys
