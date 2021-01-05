@@ -7,5 +7,5 @@ Implementation of a cmd like CLI app in Python 3
 - list/kill running processes
 
 
-# !!!REQUIRES ADMINISTRATOR PRIVILEDGES!!!
+# !!!REQUIRES ADMINISTRATOR PRIVILEGES!!!
 # !!!BACKUP YOUR REGISTRY BEFORE TRYING TO CHANGE KEYS/VALUES!!!
