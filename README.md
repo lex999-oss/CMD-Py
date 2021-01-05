@@ -6,5 +6,6 @@ Implementation of a cmd like CLI app in Python 3
 - list/create/modify/delete registry keys
 - list/kill running processes
 
+
 #!!!REQUIRES ADMINISTRATOR PRIVILEDGES!!!
 #!!!BACKUP YOUR REGISTRY BEFORE TRYING TO CHANGE KEYS/VALUES!!!
