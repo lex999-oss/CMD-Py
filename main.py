@@ -1,5 +1,6 @@
 import os
 import sys
+import signal
 import winreg
 
 if sys.argv[1] == "list_dir":
@@ -13,7 +14,12 @@ if sys.argv[1] == "list_dir":
         print("List the contents if <dir> folder\n"
               "Usage: list_dir <dir>")
     else:
-        os.system("dir {}".format(sys.argv[2]))
+        try:
+            os.system("dir {}".format(sys.argv[2]))
+        except OSError as err:
+            print(err)
+            exit(1)
+
 if sys.argv[1] == "move_dir":
     if len(sys.argv) < 3:
         print("Not enough parameters to execute command")
@@ -25,7 +31,28 @@ if sys.argv[1] == "move_dir":
         print("Move <dir1> to <dir2>\n"
               "Usage: move_dir <dir1> <dir2>")
     else:
-        os.system("move {} {}".format(sys.argv[2], sys.argv[3]))
+        try:
+            os.system("move {} {}".format(sys.argv[2], sys.argv[3]))
+        except OSError as err:
+            print(err)
+            exit(1)
+
+if sys.argv[1] == "kill_process":
+    if len(sys.argv) < 3:
+        print("Not enough parameters to execute command")
+        print("Usage: kill_process <PID>")
+    elif len(sys.argv) > 3:
+        print("Too many parameters to execute command")
+        print("Usage: kill_process <PID>")
+    elif sys.argv[2] == "help":
+        print("Kill a process by its PID\n"
+              "Usage: kill_process <PID>")
+    else:
+        try:
+            os.kill(int(sys.argv[2]), signal.SIGTERM)
+        except OSError as err:
+            print(err)
+            exit(1)
 
 if sys.argv[1] == "create_key":
     if len(sys.argv) < 3:
