@@ -3,8 +3,8 @@
 Implementation of a cmd like CLI app in Python 3
 # Features:
 - copy/move/delete files and directories
-- list/create/modify/delete registry keys
-- list/kill running processes
+- create/modify/delete registry keys
+- kill running processes
 
 
 # !!!REQUIRES ADMINISTRATOR PRIVILEGES!!!
